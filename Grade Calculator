@@ -1,0 +1,43 @@
+using System;
+
+namespace ConsoleApplications
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int choice;
+            do
+            {
+                Console.WriteLine("Select an application to run:");
+                Console.WriteLine("1. Grade Calculator");
+                Console.WriteLine("2. Ticket Price Calculator");
+                Console.WriteLine("3. Triangle Type Identifier");
+                Console.WriteLine("0. Exit");
+                Console.Write("Enter your choice: ");
+                choice = int.Parse(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+                        GradeCalculator();
+                        break;
+                    case 2:
+                        TicketPriceCalculator();
+                        break;
+                    case 3:
+                        TriangleTypeIdentifier();
+                        break;
+                    case 0:
+                        Console.WriteLine("Exiting...");
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice. Please try again.");
+                        break;
+                }
+                Console.WriteLine();
+
+            } while (choice != 0);
+        }
+
+       
